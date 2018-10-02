@@ -23,7 +23,6 @@
 		F4987E652163F1B400F06970 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4987E662163F1B400F06970 /* KeepAwake.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KeepAwake.entitlements; sourceTree = "<group>"; };
 		F4987E6C2163F1EA00F06970 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		F4987E6E2163F68600F06970 /* KeepAwake-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KeepAwake-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +62,6 @@
 				F4987E622163F1B400F06970 /* Main.storyboard */,
 				F4987E652163F1B400F06970 /* Info.plist */,
 				F4987E662163F1B400F06970 /* KeepAwake.entitlements */,
-				F4987E6E2163F68600F06970 /* KeepAwake-Bridging-Header.h */,
 			);
 			path = KeepAwake;
 			sourceTree = "<group>";
