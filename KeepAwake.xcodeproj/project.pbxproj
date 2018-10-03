@@ -9,24 +9,47 @@
 /* Begin PBXBuildFile section */
 		F4987E5D2163F1B400F06970 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4987E5C2163F1B400F06970 /* AppDelegate.swift */; };
 		F4987E5F2163F1B400F06970 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4987E5E2163F1B400F06970 /* ViewController.swift */; };
-		F4987E612163F1B400F06970 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4987E602163F1B400F06970 /* Assets.xcassets */; };
 		F4987E642163F1B400F06970 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4987E622163F1B400F06970 /* Main.storyboard */; };
 		F4987E6D2163F1EA00F06970 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F4987E6C2163F1EA00F06970 /* .gitignore */; };
+		F4987E73216406E400F06970 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4987E72216406E400F06970 /* Assets.xcassets */; };
+		F4987E812164142600F06970 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4987E802164142600F06970 /* main.swift */; };
+		F4FA8682216448D2009D1572 /* KeepAwakeHelper in Resources */ = {isa = PBXBuildFile; fileRef = F4987E79216413FD00F06970 /* KeepAwakeHelper */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F4987E77216413FD00F06970 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F4987E592163F1B400F06970 /* KeepAwake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepAwake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4987E5C2163F1B400F06970 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4987E5E2163F1B400F06970 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F4987E602163F1B400F06970 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4987E632163F1B400F06970 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F4987E652163F1B400F06970 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4987E662163F1B400F06970 /* KeepAwake.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KeepAwake.entitlements; sourceTree = "<group>"; };
 		F4987E6C2163F1EA00F06970 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		F4987E72216406E400F06970 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F4987E79216413FD00F06970 /* KeepAwakeHelper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KeepAwakeHelper; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4987E802164142600F06970 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F4987E562163F1B400F06970 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4987E76216413FD00F06970 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +64,7 @@
 			children = (
 				F4987E6C2163F1EA00F06970 /* .gitignore */,
 				F4987E5B2163F1B400F06970 /* KeepAwake */,
+				F4987E7A216413FD00F06970 /* KeepAwakeHelper */,
 				F4987E5A2163F1B400F06970 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				F4987E592163F1B400F06970 /* KeepAwake.app */,
+				F4987E79216413FD00F06970 /* KeepAwakeHelper */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,12 +83,20 @@
 			children = (
 				F4987E5C2163F1B400F06970 /* AppDelegate.swift */,
 				F4987E5E2163F1B400F06970 /* ViewController.swift */,
-				F4987E602163F1B400F06970 /* Assets.xcassets */,
+				F4987E72216406E400F06970 /* Assets.xcassets */,
 				F4987E622163F1B400F06970 /* Main.storyboard */,
 				F4987E652163F1B400F06970 /* Info.plist */,
 				F4987E662163F1B400F06970 /* KeepAwake.entitlements */,
 			);
 			path = KeepAwake;
+			sourceTree = "<group>";
+		};
+		F4987E7A216413FD00F06970 /* KeepAwakeHelper */ = {
+			isa = PBXGroup;
+			children = (
+				F4987E802164142600F06970 /* main.swift */,
+			);
+			path = KeepAwakeHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +119,23 @@
 			productReference = F4987E592163F1B400F06970 /* KeepAwake.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F4987E78216413FD00F06970 /* KeepAwakeHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4987E7D216413FD00F06970 /* Build configuration list for PBXNativeTarget "KeepAwakeHelper" */;
+			buildPhases = (
+				F4987E75216413FD00F06970 /* Sources */,
+				F4987E76216413FD00F06970 /* Frameworks */,
+				F4987E77216413FD00F06970 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KeepAwakeHelper;
+			productName = KeepAwakeHelper;
+			productReference = F4987E79216413FD00F06970 /* KeepAwakeHelper */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -97,6 +147,10 @@
 				ORGANIZATIONNAME = "Sean McElholm";
 				TargetAttributes = {
 					F4987E582163F1B400F06970 = {
+						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
+					};
+					F4987E78216413FD00F06970 = {
 						CreatedOnToolsVersion = 10.0;
 						LastSwiftMigration = 1000;
 					};
@@ -116,6 +170,7 @@
 			projectRoot = "";
 			targets = (
 				F4987E582163F1B400F06970 /* KeepAwake */,
+				F4987E78216413FD00F06970 /* KeepAwakeHelper */,
 			);
 		};
 /* End PBXProject section */
@@ -125,8 +180,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4987E612163F1B400F06970 /* Assets.xcassets in Resources */,
+				F4FA8682216448D2009D1572 /* KeepAwakeHelper in Resources */,
 				F4987E6D2163F1EA00F06970 /* .gitignore in Resources */,
+				F4987E73216406E400F06970 /* Assets.xcassets in Resources */,
 				F4987E642163F1B400F06970 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +196,14 @@
 			files = (
 				F4987E5F2163F1B400F06970 /* ViewController.swift in Sources */,
 				F4987E5D2163F1B400F06970 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4987E75216413FD00F06970 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4987E812164142600F06970 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +379,39 @@
 			};
 			name = Release;
 		};
+		F4987E7E216413FD00F06970 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 234U9Z4R3T;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		F4987E7F216413FD00F06970 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 234U9Z4R3T;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -332,6 +429,15 @@
 			buildConfigurations = (
 				F4987E6A2163F1B400F06970 /* Debug */,
 				F4987E6B2163F1B400F06970 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4987E7D216413FD00F06970 /* Build configuration list for PBXNativeTarget "KeepAwakeHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4987E7E216413FD00F06970 /* Debug */,
+				F4987E7F216413FD00F06970 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
