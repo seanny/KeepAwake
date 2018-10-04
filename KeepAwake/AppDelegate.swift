@@ -17,6 +17,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	let task = Process()
 	var toggleString:String = "Enable"
 	let menu = NSMenu()
+	var caffeine = Caffeine()
 	
 	func applicationDidFinishLaunching(_ aNotification: Notification)
 	{
@@ -28,7 +29,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		ConstructMenu()
 	}
 
-	func applicationWillTerminate(_ aNotification: Notification) {
+	func applicationWillTerminate(_ aNotification: Notification)
+	{
 		// Insert code here to tear down your application
 		if task.isRunning
 		{
@@ -40,20 +42,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	{
 		if let button = statusItem.button
 		{
-			if toggleAwake == true
+			print("isRunning: " + caffeine.isRunning.description)
+			if caffeine.isRunning == true
 			{
 				toggleString = "Enable"
-				toggleAwake = false
-				task.terminate()
+				caffeine.stopCaffeinate()
+				
 				button.image = NSImage(named: NSImage.Name("StatusBarButtonImage"))
 			}
 			else
 			{
 				toggleString = "Disable"
-				toggleAwake = true
-				task.launchPath = "/usr/bin/caffeinate"
-				task.arguments = ["-d"]
-				task.launch()
+				caffeine.launchCaffeinate()
 				
 				button.image = NSImage(named: NSImage.Name("StatusBarActive"))
 			}

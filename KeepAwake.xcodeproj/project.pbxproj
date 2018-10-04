@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F42687242164FD2C00674A95 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F42687232164FD2C00674A95 /* LICENSE */; };
+		F42687332165781D00674A95 /* Caffeine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42687322165781D00674A95 /* Caffeine.swift */; };
 		F4987E5D2163F1B400F06970 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4987E5C2163F1B400F06970 /* AppDelegate.swift */; };
 		F4987E5F2163F1B400F06970 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4987E5E2163F1B400F06970 /* ViewController.swift */; };
 		F4987E642163F1B400F06970 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4987E622163F1B400F06970 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		F42687232164FD2C00674A95 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F42687322165781D00674A95 /* Caffeine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caffeine.swift; sourceTree = "<group>"; };
 		F4987E592163F1B400F06970 /* KeepAwake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepAwake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4987E5C2163F1B400F06970 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4987E5E2163F1B400F06970 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				F4987E622163F1B400F06970 /* Main.storyboard */,
 				F4987E652163F1B400F06970 /* Info.plist */,
 				F4987E662163F1B400F06970 /* KeepAwake.entitlements */,
+				F42687322165781D00674A95 /* Caffeine.swift */,
 			);
 			path = KeepAwake;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4987E5F2163F1B400F06970 /* ViewController.swift in Sources */,
+				F42687332165781D00674A95 /* Caffeine.swift in Sources */,
 				F4987E5D2163F1B400F06970 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
