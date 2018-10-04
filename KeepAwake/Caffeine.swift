@@ -40,7 +40,7 @@ final class Caffeine
 	{
 		let task = Process()
 		task.launchPath = "/usr/bin/caffeinate"
-		task.arguments = ["-d"]
+		task.arguments = ["-diu"]
 		task.launch()
 		return task
 	}
