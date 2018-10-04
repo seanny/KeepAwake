@@ -36,12 +36,6 @@ print("Fullpath: " + fullPath)
 			print("Not launching on startup")
 			try FileManager.default.removeItem(at: (file)!)
 			SMLoginItemSetEnabled(bundleID, false)
-			let alert:NSAlert = NSAlert()
-			alert.messageText = "Launch on Startup"
-			alert.informativeText = "Keep Awake will no longer start on launch."
-			alert.alertStyle = NSAlert.Style.informational
-			alert.addButton(withTitle: "OK")
-			alert.runModal()
 		}
 		else
 		{
