@@ -10,7 +10,7 @@ import Foundation
 
 final class Caffeine
 {
-	private var caffeineProcess:Process?
+	static var caffeineProcess:Process?
 	
 	func launchCaffeinate()
 	{
@@ -19,12 +19,12 @@ final class Caffeine
 			print("Caffeine is already running")
 			return
 		}
-		caffeineProcess = caffeineTask()
+		Caffeine.caffeineProcess = caffeineTask()
 	}
 	
 	var isRunning:Bool
 	{
-		return (caffeineProcess?.isRunning ?? false)
+		return (Caffeine.caffeineProcess?.isRunning ?? false)
 	}
 	
 	func stopCaffeinate()
@@ -32,7 +32,7 @@ final class Caffeine
 		if (isRunning)
 		{
 			print("Caffeine stopped")
-			caffeineProcess?.terminate()
+			Caffeine.caffeineProcess?.terminate()
 		}
 	}
 	
