@@ -54,3 +54,6 @@ DerivedData/
 *.exe
 *.out
 *.app
+
+# Folders
+[Bb]uild/
