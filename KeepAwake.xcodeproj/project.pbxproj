@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F42687242164FD2C00674A95 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F42687232164FD2C00674A95 /* LICENSE */; };
 		F42687332165781D00674A95 /* Caffeine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42687322165781D00674A95 /* Caffeine.swift */; };
+		F465C97721696C8B00F57487 /* HelperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465C97621696C8B00F57487 /* HelperApp.swift */; };
 		F4987E5D2163F1B400F06970 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4987E5C2163F1B400F06970 /* AppDelegate.swift */; };
 		F4987E5F2163F1B400F06970 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4987E5E2163F1B400F06970 /* ViewController.swift */; };
 		F4987E642163F1B400F06970 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4987E622163F1B400F06970 /* Main.storyboard */; };
@@ -16,10 +17,23 @@
 		F4987E73216406E400F06970 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4987E72216406E400F06970 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F416E0042166F6E30047B2E1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		F416DFF02166E3B80047B2E1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F42687232164FD2C00674A95 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		F42687322165781D00674A95 /* Caffeine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caffeine.swift; sourceTree = "<group>"; };
+		F465C97621696C8B00F57487 /* HelperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperApp.swift; sourceTree = "<group>"; };
 		F4987E592163F1B400F06970 /* KeepAwake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepAwake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4987E5C2163F1B400F06970 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4987E5E2163F1B400F06970 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +92,7 @@
 				F4987E652163F1B400F06970 /* Info.plist */,
 				F4987E662163F1B400F06970 /* KeepAwake.entitlements */,
 				F42687322165781D00674A95 /* Caffeine.swift */,
+				F465C97621696C8B00F57487 /* HelperApp.swift */,
 			);
 			path = KeepAwake;
 			sourceTree = "<group>";
@@ -92,6 +107,7 @@
 				F4987E552163F1B400F06970 /* Sources */,
 				F4987E562163F1B400F06970 /* Frameworks */,
 				F4987E572163F1B400F06970 /* Resources */,
+				F416E0042166F6E30047B2E1 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -158,6 +174,7 @@
 				F4987E5F2163F1B400F06970 /* ViewController.swift in Sources */,
 				F42687332165781D00674A95 /* Caffeine.swift in Sources */,
 				F4987E5D2163F1B400F06970 /* AppDelegate.swift in Sources */,
+				F465C97721696C8B00F57487 /* HelperApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,6 +18,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	var toggleString:String = "Enable"
 	let menu = NSMenu()
 	var caffeine = Caffeine()
+	let helperApp = HelperApp()
+	var helperFound = Bool()
+	var launchButton = NSMenuItem()
 	
 	func applicationDidFinishLaunching(_ aNotification: Notification)
 	{
@@ -25,7 +28,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		if let button = statusItem.button {
 			button.image = NSImage(named: NSImage.Name("StatusBarButtonImage"))
 			button.action = #selector(ToggleAwakeStatus(_:))
+			button.image?.isTemplate = true
 		}
+		
+		if helperApp.GetHelper() == true
+		{
+			helperFound = true
+		}
+		else
+		{
+			helperFound = false
+			helperApp.StartHelper()
+		}
+		
 		ConstructMenu()
 	}
 
@@ -61,17 +76,29 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		}
 	}
 	
-	@objc func ToggleLaunchStartup(_ sender: Any?)
+	@objc func ToggleLaunchStartup(_ sender: NSMenuItem)
 	{
-		SMLoginItemSetEnabled(Bundle.main.infoDictionary![kCFBundleIdentifierKey as String] as! CFString, true)
+		if helperApp.startAtLogin == true
+		{
+			helperApp.startAtLogin = false
+			launchButton.state = NSControl.StateValue.off
+			
+		}
+		else
+		{
+			helperApp.startAtLogin = true
+			launchButton.state = NSControl.StateValue.on
+		}
 	}
 	
 	func ConstructMenu()
 	{
+		launchButton = NSMenuItem(title: "Launch at startup", action: #selector(AppDelegate.ToggleLaunchStartup(_:)), keyEquivalent: "")
+		
 		menu.removeAllItems()
 		menu.addItem(NSMenuItem(title: toggleString, action: #selector(AppDelegate.ToggleAwakeStatus(_:)), keyEquivalent: "T"))
 		menu.addItem(NSMenuItem.separator())
-		menu.addItem(NSMenuItem(title: "Launch at startup", action: #selector(AppDelegate.ToggleLaunchStartup(_:)), keyEquivalent: "P"))
+		menu.addItem(launchButton)
 		menu.addItem(NSMenuItem.separator())
 		menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
 		statusItem.menu = menu
