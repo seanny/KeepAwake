@@ -18,7 +18,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	var toggleString:String = "Enable"
 	let menu = NSMenu()
 	var caffeine = Caffeine()
-	let helperApp = HelperApp()
 	var helperFound = Bool()
 	var launchButton = NSMenuItem()
 	
@@ -29,16 +28,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 			button.image = NSImage(named: NSImage.Name("StatusBarButtonImage"))
 			button.action = #selector(ToggleAwakeStatus(_:))
 			button.image?.isTemplate = true
-		}
-		
-		if helperApp.GetHelper() == true
-		{
-			helperFound = true
-		}
-		else
-		{
-			helperFound = false
-			helperApp.StartHelper()
 		}
 		
 		ConstructMenu()
@@ -75,21 +64,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 				button.image?.isTemplate = true
 			}
 			ConstructMenu()
-		}
-	}
-	
-	@objc func ToggleLaunchStartup(_ sender: NSMenuItem)
-	{
-		if helperApp.startAtLogin == true
-		{
-			helperApp.startAtLogin = false
-			launchButton.state = NSControl.StateValue.off
-			
-		}
-		else
-		{
-			helperApp.startAtLogin = true
-			launchButton.state = NSControl.StateValue.on
 		}
 	}
 	

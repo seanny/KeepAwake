@@ -9,11 +9,9 @@
 /* Begin PBXBuildFile section */
 		F42687242164FD2C00674A95 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F42687232164FD2C00674A95 /* LICENSE */; };
 		F42687332165781D00674A95 /* Caffeine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42687322165781D00674A95 /* Caffeine.swift */; };
-		F465C97721696C8B00F57487 /* HelperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465C97621696C8B00F57487 /* HelperApp.swift */; };
 		F4987E5D2163F1B400F06970 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4987E5C2163F1B400F06970 /* AppDelegate.swift */; };
 		F4987E5F2163F1B400F06970 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4987E5E2163F1B400F06970 /* ViewController.swift */; };
 		F4987E642163F1B400F06970 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4987E622163F1B400F06970 /* Main.storyboard */; };
-		F4987E6D2163F1EA00F06970 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F4987E6C2163F1EA00F06970 /* .gitignore */; };
 		F4987E73216406E400F06970 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4987E72216406E400F06970 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +31,6 @@
 		F416DFF02166E3B80047B2E1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F42687232164FD2C00674A95 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		F42687322165781D00674A95 /* Caffeine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caffeine.swift; sourceTree = "<group>"; };
-		F465C97621696C8B00F57487 /* HelperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperApp.swift; sourceTree = "<group>"; };
 		F4987E592163F1B400F06970 /* KeepAwake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepAwake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4987E5C2163F1B400F06970 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4987E5E2163F1B400F06970 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,7 +89,6 @@
 				F4987E652163F1B400F06970 /* Info.plist */,
 				F4987E662163F1B400F06970 /* KeepAwake.entitlements */,
 				F42687322165781D00674A95 /* Caffeine.swift */,
-				F465C97621696C8B00F57487 /* HelperApp.swift */,
 			);
 			path = KeepAwake;
 			sourceTree = "<group>";
@@ -157,7 +153,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4987E6D2163F1EA00F06970 /* .gitignore in Resources */,
 				F4987E73216406E400F06970 /* Assets.xcassets in Resources */,
 				F4987E642163F1B400F06970 /* Main.storyboard in Resources */,
 				F42687242164FD2C00674A95 /* LICENSE in Resources */,
@@ -174,7 +169,6 @@
 				F4987E5F2163F1B400F06970 /* ViewController.swift in Sources */,
 				F42687332165781D00674A95 /* Caffeine.swift in Sources */,
 				F4987E5D2163F1B400F06970 /* AppDelegate.swift in Sources */,
-				F465C97721696C8B00F57487 /* HelperApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,12 +304,14 @@
 		F4987E6A2163F1B400F06970 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = KeepAwake/KeepAwake.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 234U9Z4R3T;
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = KeepAwake/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -332,12 +328,14 @@
 		F4987E6B2163F1B400F06970 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = KeepAwake/KeepAwake.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 234U9Z4R3T;
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = KeepAwake/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
