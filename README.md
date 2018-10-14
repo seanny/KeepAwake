@@ -4,6 +4,9 @@ KeepAwake is a simple macOS utility to prevent your Mac from going to sleep.
 ## Supported Versions:
 * macOS 10.14
 
+## My goals for this app
+My main goals are to learn Swift programming and this means that I will attempt to write everything needed in-house, I do not want to use any third party libraries for this project.
+
 ## Features
 * Prevent your mac from going to sleep
 
