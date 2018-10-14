@@ -69,12 +69,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	
 	func ConstructMenu()
 	{
-		launchButton = NSMenuItem(title: "Launch at startup", action: #selector(AppDelegate.ToggleLaunchStartup(_:)), keyEquivalent: "")
-		
 		menu.removeAllItems()
 		menu.addItem(NSMenuItem(title: toggleString, action: #selector(AppDelegate.ToggleAwakeStatus(_:)), keyEquivalent: "T"))
 		menu.addItem(NSMenuItem.separator())
-		menu.addItem(launchButton)
 		menu.addItem(NSMenuItem.separator())
 		menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
 		statusItem.menu = menu
