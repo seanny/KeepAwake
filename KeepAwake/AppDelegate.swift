@@ -64,6 +64,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 				caffeine.stopCaffeinate()
 				
 				button.image = NSImage(named: NSImage.Name("StatusBarButtonImage"))
+				button.image?.isTemplate = true
 			}
 			else
 			{
@@ -71,6 +72,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 				caffeine.launchCaffeinate()
 				
 				button.image = NSImage(named: NSImage.Name("StatusBarActive"))
+				button.image?.isTemplate = true
 			}
 			ConstructMenu()
 		}
