@@ -21,9 +21,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	var helperFound = Bool()
 	var launchButton = NSMenuItem()
 	
-	let st = NSStoryboard(name: "AboutWindow", bundle: nil)
-	var aboutWindow = NSWindowController()
-	
 	func applicationDidFinishLaunching(_ aNotification: Notification)
 	{
 		// Insert code here to initialize your application
@@ -32,8 +29,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 			button.action = #selector(ToggleAwakeStatus(_:))
 			button.image?.isTemplate = true
 		}
-		
-		aboutWindow = st.instantiateInitialController()
 		ConstructMenu()
 	}
 
@@ -74,14 +69,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	@objc func ShowAbout(_ sender: Any?)
 	{
 		// TODO: Show about window
-		if aboutWindow.window?.isVisible == false
-		{
-			aboutWindow.window?.setIsVisible(true);
-		}
-		else
-		{
-			aboutWindow.window?.setIsVisible(false);
-		}
 	}
 	
 	func ConstructMenu()
