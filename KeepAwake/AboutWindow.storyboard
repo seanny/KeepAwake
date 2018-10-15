@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="iHp-PS-W0j">
+            <objects>
+                <windowController id="OT4-Ne-pq3" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="Sq0-M3-5CG">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="249" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
+                        <connections>
+                            <outlet property="delegate" destination="OT4-Ne-pq3" id="p1X-Mr-UaY"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="8xz-g7-8Un" kind="relationship" relationship="window.shadowedContentViewController" id="la1-hY-U8p"/>
+                    </connections>
+                </windowController>
+                <customObject id="qOZ-Q4-XA0" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--About Window View Controller-->
+        <scene sceneID="2di-6c-gln">
+            <objects>
+                <viewController id="8xz-g7-8Un" customClass="AboutWindowViewController" customModule="KeepAwake" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="hHK-HM-G3q">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <scrollView ambiguous="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0K1-Kb-dlD">
+                                <rect key="frame" x="20" y="20" width="440" height="135"/>
+                                <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="IJu-JM-2Vw">
+                                    <rect key="frame" x="0.0" y="0.0" width="425" height="135"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView ambiguous="YES" importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="EnD-TT-Pyh">
+                                            <rect key="frame" x="0.0" y="0.0" width="425" height="135"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <size key="minSize" width="425" height="135"/>
+                                            <size key="maxSize" width="437" height="10000000"/>
+                                            <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        </textView>
+                                    </subviews>
+                                </clipView>
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="LF1-cJ-xlP">
+                                    <rect key="frame" x="425" y="0.0" width="15" height="135"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qBl-sA-NLf" userLabel="AppIcon">
+                                <rect key="frame" x="193" y="157" width="95" height="93"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="StatusBarButtonImage" id="9dV-Qz-8pN"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0K1-Kb-dlD" secondAttribute="trailing" constant="20" id="1B4-xJ-fJa"/>
+                            <constraint firstAttribute="trailing" secondItem="0K1-Kb-dlD" secondAttribute="trailing" constant="20" id="5WE-5n-iOs"/>
+                            <constraint firstItem="0K1-Kb-dlD" firstAttribute="top" secondItem="qBl-sA-NLf" secondAttribute="bottom" constant="2" id="9HI-5G-uv2"/>
+                            <constraint firstItem="0K1-Kb-dlD" firstAttribute="leading" secondItem="hHK-HM-G3q" secondAttribute="leading" constant="20" id="Gi5-xJ-9nc"/>
+                            <constraint firstItem="0K1-Kb-dlD" firstAttribute="leading" secondItem="hHK-HM-G3q" secondAttribute="leading" constant="20" id="sWw-fL-gJL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="aboutView" destination="hHK-HM-G3q" id="Tea-o1-GBQ"/>
+                        <outlet property="appIcon" destination="qBl-sA-NLf" id="7go-Ny-EQg"/>
+                        <outlet property="licenseText" destination="EnD-TT-Pyh" id="jcI-uH-6Zo"/>
+                        <outlet property="licenseTextField" destination="0K1-Kb-dlD" id="SAb-lX-ijI"/>
+                    </connections>
+                </viewController>
+                <customObject id="oDy-nR-iYn" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131" y="798"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="StatusBarButtonImage" width="32" height="32"/>
+    </resources>
+</document>

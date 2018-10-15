@@ -13,6 +13,8 @@
 		F4987E5F2163F1B400F06970 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4987E5E2163F1B400F06970 /* ViewController.swift */; };
 		F4987E642163F1B400F06970 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4987E622163F1B400F06970 /* Main.storyboard */; };
 		F4987E73216406E400F06970 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4987E72216406E400F06970 /* Assets.xcassets */; };
+		F4ADB19A2174B84F00EB1147 /* AboutWindow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4ADB1992174B84F00EB1147 /* AboutWindow.storyboard */; };
+		F4ADB19C2174BA3F00EB1147 /* AboutWindowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ADB19B2174BA3F00EB1147 /* AboutWindowViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +41,8 @@
 		F4987E662163F1B400F06970 /* KeepAwake.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KeepAwake.entitlements; sourceTree = "<group>"; };
 		F4987E6C2163F1EA00F06970 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		F4987E72216406E400F06970 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F4ADB1992174B84F00EB1147 /* AboutWindow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AboutWindow.storyboard; sourceTree = "<group>"; };
+		F4ADB19B2174BA3F00EB1147 /* AboutWindowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutWindowViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,8 @@
 				F4987E652163F1B400F06970 /* Info.plist */,
 				F4987E662163F1B400F06970 /* KeepAwake.entitlements */,
 				F42687322165781D00674A95 /* Caffeine.swift */,
+				F4ADB1992174B84F00EB1147 /* AboutWindow.storyboard */,
+				F4ADB19B2174BA3F00EB1147 /* AboutWindowViewController.swift */,
 			);
 			path = KeepAwake;
 			sourceTree = "<group>";
@@ -153,6 +159,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4ADB19A2174B84F00EB1147 /* AboutWindow.storyboard in Resources */,
 				F4987E73216406E400F06970 /* Assets.xcassets in Resources */,
 				F4987E642163F1B400F06970 /* Main.storyboard in Resources */,
 				F42687242164FD2C00674A95 /* LICENSE in Resources */,
@@ -166,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4ADB19C2174BA3F00EB1147 /* AboutWindowViewController.swift in Sources */,
 				F4987E5F2163F1B400F06970 /* ViewController.swift in Sources */,
 				F42687332165781D00674A95 /* Caffeine.swift in Sources */,
 				F4987E5D2163F1B400F06970 /* AppDelegate.swift in Sources */,
