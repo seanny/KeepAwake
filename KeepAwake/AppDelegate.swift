@@ -20,6 +20,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	var caffeine = Caffeine()
 	var helperFound = Bool()
 	var launchButton = NSMenuItem()
+    var aboutWindow = NSWindow()
+    let aboutWindowController = NSWindowController()
 	
 	func applicationDidFinishLaunching(_ aNotification: Notification)
 	{
@@ -29,6 +31,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 			button.action = #selector(ToggleAwakeStatus(_:))
 			button.image?.isTemplate = true
 		}
+        
 		ConstructMenu()
 	}
 
@@ -45,7 +48,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	{
 		if let button = statusItem.button
 		{
+            #if DEBUG
 			print("isRunning: " + caffeine.isRunning.description)
+            #endif
 			if caffeine.isRunning == true
 			{
 				toggleString = "Enable"
@@ -63,12 +68,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 				button.image?.isTemplate = true
 			}
 			ConstructMenu()
-		}
-	}
+		}	}
 	
 	@objc func ShowAbout(_ sender: Any?)
 	{
 		// TODO: Show about window
+        aboutWindow = NSWindow(contentRect: NSMakeRect(100, 100, 200, 200), styleMask: [.titled, .closable], backing: NSWindow.BackingStoreType.buffered, defer: false)
+        aboutWindow.makeKeyAndOrderFront(nil)
+        aboutWindow.center()
+        
+        var label = NSTextField()
+        label.isEditable = false
+        label.drawsBackground = false
+        label.stringValue = "Copyright (C) 2017 Sean McElholm"
+        
+        aboutWindow.contentView?.addSubview(label)
 	}
 	
 	func ConstructMenu()

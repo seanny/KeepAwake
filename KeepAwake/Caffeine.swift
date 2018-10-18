@@ -16,7 +16,9 @@ final class Caffeine
 	{
 		if (isRunning)
 		{
+            #if DEBUG
 			print("Caffeine is already running")
+            #endif
 			return
 		}
 		Caffeine.caffeineProcess = caffeineTask()
@@ -31,7 +33,9 @@ final class Caffeine
 	{
 		if (isRunning)
 		{
+            #if DEBUG
 			print("Caffeine stopped")
+            #endif
 			Caffeine.caffeineProcess?.terminate()
 		}
 	}
