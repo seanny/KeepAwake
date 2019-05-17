@@ -30,7 +30,7 @@ public class AboutWindow: NSObject
         let label = NSTextField()
         label.frame = CGRect(origin: .zero, size: CGSize(width: 100, height: 44))
         label.stringValue = "Hello World"
-        label.backgroundColor = .white
+        label.backgroundColor = .clear
         label.isBezeled = false
         label.isEditable = false
         label.sizeToFit()

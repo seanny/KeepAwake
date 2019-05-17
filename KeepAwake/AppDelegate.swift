@@ -11,8 +11,8 @@ import CoreGraphics
 import ServiceManagement
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
-	
+class AppDelegate: NSObject, NSApplicationDelegate
+{
 	let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
 	var toggleAwake: Bool!
 	let task = Process()
@@ -30,6 +30,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 			button.action = #selector(ToggleAwakeStatus(_:))
 			button.image?.isTemplate = true
 		}
+        else {
+            fatalError("Cannot create status bar")
+        }
         
         NSApp.activate(ignoringOtherApps: true)
         AboutWindow.shared.createAboutWindow()
