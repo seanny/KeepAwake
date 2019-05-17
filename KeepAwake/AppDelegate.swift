@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import CoreGraphics
 import ServiceManagement
 
 @NSApplicationMain
@@ -21,7 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	var helperFound = Bool()
 	var launchButton = NSMenuItem()
     var aboutWindow = NSWindow()
-    let aboutWindowController = NSWindowController()
+    var aboutWindowController = NSWindowController()
 	
 	func applicationDidFinishLaunching(_ aNotification: Notification)
 	{
@@ -32,6 +33,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 			button.image?.isTemplate = true
 		}
         
+        NSApp.activate(ignoringOtherApps: true)
+        createAboutWindow()
 		ConstructMenu()
 	}
 
@@ -68,21 +71,32 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 				button.image?.isTemplate = true
 			}
 			ConstructMenu()
-		}	}
+		}
+    }
+    
+    func createAboutWindow()
+    {
+        aboutWindow = NSWindow(contentRect: NSMakeRect(100, 100, 200, 200), styleMask: [.titled, .closable], backing: NSWindow.BackingStoreType.buffered, defer: false)
+        aboutWindow.isOpaque = true
+        aboutWindow.title = "About KeepAwake"
+        aboutWindow.isReleasedWhenClosed = false
+        aboutWindowController = NSWindowController(window: aboutWindow)
+        
+        let label = NSTextField()
+        label.frame = CGRect(origin: .zero, size: CGSize(width: 100, height: 44))
+        label.stringValue = "Hello World"
+        label.backgroundColor = .white
+        label.isBezeled = false
+        label.isEditable = false
+        label.sizeToFit()
+        
+        aboutWindowController.window?.contentView?.addSubview(label)
+    }
 	
 	@objc func ShowAbout(_ sender: Any?)
 	{
-		// TODO: Show about window
-        aboutWindow = NSWindow(contentRect: NSMakeRect(100, 100, 200, 200), styleMask: [.titled, .closable], backing: NSWindow.BackingStoreType.buffered, defer: false)
         aboutWindow.makeKeyAndOrderFront(nil)
         aboutWindow.center()
-        
-        var label = NSTextField()
-        label.isEditable = false
-        label.drawsBackground = false
-        label.stringValue = "Copyright (C) 2017 Sean McElholm"
-        
-        aboutWindow.contentView?.addSubview(label)
 	}
 	
 	func ConstructMenu()
