@@ -21,8 +21,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	var caffeine = Caffeine()
 	var helperFound = Bool()
 	var launchButton = NSMenuItem()
-    var aboutWindow = NSWindow()
-    var aboutWindowController = NSWindowController()
 	
 	func applicationDidFinishLaunching(_ aNotification: Notification)
 	{
@@ -34,7 +32,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		}
         
         NSApp.activate(ignoringOtherApps: true)
-        createAboutWindow()
+        AboutWindow.shared.createAboutWindow()
 		ConstructMenu()
 	}
 
@@ -73,40 +71,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 			ConstructMenu()
 		}
     }
-    
-    func createAboutWindow()
-    {
-        aboutWindow = NSWindow(contentRect: NSMakeRect(100, 100, 200, 200), styleMask: [.titled, .closable], backing: NSWindow.BackingStoreType.buffered, defer: false)
-        aboutWindow.isOpaque = true
-        aboutWindow.title = "About KeepAwake"
-        aboutWindow.isReleasedWhenClosed = false
-        aboutWindowController = NSWindowController(window: aboutWindow)
-        
-        let label = NSTextField()
-        label.frame = CGRect(origin: .zero, size: CGSize(width: 100, height: 44))
-        label.stringValue = "Hello World"
-        label.backgroundColor = .white
-        label.isBezeled = false
-        label.isEditable = false
-        label.sizeToFit()
-        
-        aboutWindowController.window?.contentView?.addSubview(label)
-    }
-	
-	@objc func ShowAbout(_ sender: Any?)
-	{
-        aboutWindow.makeKeyAndOrderFront(nil)
-        aboutWindow.center()
-	}
 	
 	func ConstructMenu()
 	{
+        let aboutItem = NSMenuItem(title: "About KeepAwake", action: #selector(AboutWindow.ShowAbout(_:)), keyEquivalent: "")
+        aboutItem.isEnabled = true
+        aboutItem.target = AboutWindow.shared
+        
 		menu.removeAllItems()
-		menu.addItem(NSMenuItem(title: toggleString, action: #selector(AppDelegate.ToggleAwakeStatus(_:)), keyEquivalent: "T"))
+		menu.addItem(NSMenuItem(title: toggleString, action: #selector(AppDelegate.ToggleAwakeStatus(_:)), keyEquivalent: ""))
 		menu.addItem(NSMenuItem.separator())
-		menu.addItem(NSMenuItem(title: "About KeepAwake", action: #selector(AppDelegate.ShowAbout(_:)), keyEquivalent: ""))
+		menu.addItem(aboutItem)
 		menu.addItem(NSMenuItem.separator())
-		menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
+		menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: ""))
 		statusItem.menu = menu
 	}
 }
